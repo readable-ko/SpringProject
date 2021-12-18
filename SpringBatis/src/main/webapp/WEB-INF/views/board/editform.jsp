@@ -29,7 +29,7 @@
 						<option value="기타">기타</option>
 				</select></td></tr>
 		<tr><td>제목</td><td><form:input path="title" /></td></tr>
-		<tr><td>글쓴이</td><td><form:input path="writer" value="${loginId}" readonly="true"/></td></tr>
+		<tr><td>글쓴이</td><td><form:input path="writer" value="${Writer}" readonly="true"/></td></tr>
 		<!-- <tr><td>파일명</td><td><input type="file" id="file" name="file"></td></tr> -->
 		 <tr><td>내용</td><td><form:textarea cols="50" rows="5" path="content"/></td></tr>
 	</table>
