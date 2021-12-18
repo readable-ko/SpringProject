@@ -2,6 +2,8 @@ package com.mycompany.myapp.board;
 
 import java.util.Date;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class BoardVO {
 	private int seq;
 	private String title;
@@ -10,7 +12,14 @@ public class BoardVO {
 	private String content;
 	private Date regdate;
 	private int cnt;
+	private MultipartFile file;
 	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+	}
 	public int getSeq() {
 		return seq;
 	}

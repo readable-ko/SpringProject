@@ -9,6 +9,9 @@
 		<property name="url" value="jdbc:mysql://walab.handong.edu/PP2_21700026"/>
 		<property name="username" value="PP2_21700026"/>
 		<property name="password" value="aePhai3c"/>
+		<!-- <property name="url" value="jdbc:mysql://walab.handong.edu/PP2_21700331"/>
+		<property name="username" value="PP2_21700331"/>
+		<property name="password" value="ohtoh0Ej"/> -->
 	</bean>
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">

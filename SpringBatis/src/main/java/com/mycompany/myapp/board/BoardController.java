@@ -33,9 +33,9 @@ public class BoardController {
 //		model.addAttribute("serverTime", formattedDate);
 //		
 //		List<String> posts = new ArrayList<String>();
-//		posts.add("ì˜¤ëŠ˜ ë‚ ì”¨ ë„ˆë¬´ ì¢‹ë‹¹");
-//		posts.add("ê·¼ë° ë‚´ ì ì‹¬ ë„ì‹œë½");
-//		posts.add("Spring ì˜¤ë©´ ì¢‹ê² ë‹¤");
+//		posts.add("¿À´Ã ³¯¾¾ ³Ê¹« ÁÁ´ç");
+//		posts.add("±Ùµ¥ ³» Á¡½É µµ½Ã¶ô");
+//		posts.add("Spring ¿À¸é ÁÁ°Ú´Ù");
 //		model.addAttribute("list", posts);
 //		
 //		return "board/list";
@@ -55,9 +55,9 @@ public class BoardController {
 	public String addPostOK(BoardVO vo) {
 		int i = boardService.insertBoard(vo);
 		if(i == 0)
-			System.out.println("ë°ì´í„° ì¶”ê°€ ì‹¤íŒ¨");
+			System.out.println("µ¥ÀÌÅÍ Ãß°¡ ½ÇÆĞ");
 		else
-			System.out.println("ë°ì´í„° ì¶”ê°€ ì„±ê³µ!!!");
+			System.out.println("µ¥ÀÌÅÍ Ãß°¡ ¼º°ø!!!");
 		return "redirect:list";
 	}
 	
@@ -72,9 +72,9 @@ public class BoardController {
 	public String editPostOK(BoardVO vo) {
 		int i = boardService.updateBoard(vo);
 		if(i==0)
-			System.out.println("ë°ì´í„° ìˆ˜ì • ì‹¤íŒ¨");
+			System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ½ÇÆĞ");
 		else
-			System.out.println("ë°ì´í„° ìˆ˜ì • ì„±ê³µ!!!");
+			System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ¼º°ø!!!");
 		return "redirect:list";
 	}
 	
@@ -82,9 +82,9 @@ public class BoardController {
 	public String deletePostOK(@PathVariable("id") int id) {
 		int i = boardService.deleteBoard(id);
 		if(i==0)
-			System.out.println("ë°ì´í„° ìˆ˜ì • ì‹¤íŒ¨");
+			System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ½ÇÆĞ");
 		else
-			System.out.println("ë°ì´í„° ìˆ˜ì • ì„±ê³µ!!!");
+			System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ¼º°ø!!!");
 		return "redirect:../list";
 	}
 }

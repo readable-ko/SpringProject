@@ -22,10 +22,16 @@
 <form:form commandName="boardVO" method="POST" action="../editok">
 	<form:hidden path="seq"/>
 	<table id="edit">
-		<tr><td>카테고리</td><td><form:input path="category" /></td></tr>
+		<tr><td>카테고리</td><td><select id="category" name="category">
+						<option value="익히기">익히기</option>
+						<option value="대련">대련</option>
+						<option value="대회">대회</option>
+						<option value="기타">기타</option>
+				</select></td></tr>
 		<tr><td>제목</td><td><form:input path="title" /></td></tr>
-		<tr><td>글쓴이</td><td><form:input path="writer" /></td></tr>
-		<tr><td>내용</td><td><form:textarea cols="50" rows="5" path="content"/></td></tr>
+		<tr><td>글쓴이</td><td><form:input path="writer" value="${loginId}" readonly="true"/></td></tr>
+		<!-- <tr><td>파일명</td><td><input type="file" id="file" name="file"></td></tr> -->
+		 <tr><td>내용</td><td><form:textarea cols="50" rows="5" path="content"/></td></tr>
 	</table>
 	<input type="submit" value="수정하기"/>	
 	<input type="button" value="취소하기" onclick="history.back()"/>

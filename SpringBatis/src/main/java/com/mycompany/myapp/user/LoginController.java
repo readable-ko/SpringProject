@@ -28,11 +28,13 @@ public class LoginController {
 		
 		UserVO loginvo = service.getUser(vo);
 		if(loginvo != null) {
-			System.out.println("ë¡œê·¸ì¸ ì„±ê³µ!");
+			System.out.println("·Î±×ÀÎ ¼º°ø!");
 			session.setAttribute("login", loginvo);
+			session.setAttribute("loginId", loginvo.getUserid());
+			//returnURL = "redirect:/board/posts";
 			returnURL = "redirect:/board/list";
 		} else {
-			System.out.println("ë¡œê·¸ì¸ ì‹¤íŒ¨!");
+			System.out.println("·Î±×ÀÎ ½ÇÆĞ!");
 			returnURL = "redirect:/login/login";
 		}
 		return returnURL;
@@ -47,10 +49,17 @@ public class LoginController {
 	public String signupCheck(UserVO vo) {
 		int i = service.insertUser(vo);
 		if(i == 0)
-			System.out.println("ë°ì´í„° ì¶”ê°€ ì‹¤íŒ¨");
+			System.out.println("Ãß°¡ ¼º°ø!");
 		else
-			System.out.println("ë°ì´í„° ì¶”ê°€ ì„±ê³µ!!!");
+			System.out.println("Ãß°¡ ½ÇÆĞ!!");
 		return "redirect:login";
+	}
+	
+	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	public String test(HttpSession session) {
+		//·Î±×ÀÎ °ªÀ» °è¼Ó °¡Áö°í ÀÖ´Â Session TEST
+		System.out.println((String)session.getAttribute("loginId"));
+		return "redirect:/board0";
 	}
 	
 	@RequestMapping(value="/logout")
@@ -58,4 +67,6 @@ public class LoginController {
 		session.invalidate();
 		return "redirect:/login/login";
 	}
+	
+	
 }

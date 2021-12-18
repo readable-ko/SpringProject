@@ -20,10 +20,10 @@ public class DataSourceTest {
 		
 		try {
 			Connection con = ds.getConnection();
-			System.out.println("DB연결 성공!!!");
+			System.out.println("DB�뿰寃� �꽦怨�!!!");
 		} catch (SQLException e) {
 			e.printStackTrace();
-			System.out.println("DB연결 실패!!!");
+			System.out.println("DB�뿰寃� �떎�뙣!!!");
 		}
 	}
 }
