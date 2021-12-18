@@ -14,12 +14,25 @@
 	<form action="addok" method="post">
 		<table id="edit">
 			<tr>
+				<td>종류</td>
+				<td><input type="radio" id="ch1" name="main_category" value="공지">
+				<label for="ch1">공지</label>
+				<input type="radio" id="ch2" name="main_category" value="일반">
+				<label for="ch2">일반</label></td>
+			</tr>
+			<tr>
 				<td>카테고리</td>
 				<td><select id="category" name="category">
-						<option value="익히기">익히기</option>
-						<option value="대련">대련</option>
-						<option value="대회">대회</option>
-						<option value="기타">기타</option>
+						<optgroup label="공지">
+							<option value="전체 공지">전체공지</option>
+							<option value="기수 공지">기수 공지</option>
+						</optgroup>
+						<optgroup label="일반">
+							<option value="익히기">익히기</option>
+							<option value="대련">대련</option>
+							<option value="대회">대회</option>
+							<option value="기타">기타</option>
+						</optgroup>
 				</select></td>
 			</tr>
 			<tr>
