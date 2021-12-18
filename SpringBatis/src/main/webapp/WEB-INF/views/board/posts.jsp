@@ -73,8 +73,8 @@
 			<th>Category</th>
 			<th>Title</th>
 			<th>Writer</th>
-			<th>Content</th>
 			<th>Regdate</th>
+			<th>View</th>
 			<th>Edit</th>
 			<th>Delete</th>
 		</tr>
@@ -84,8 +84,8 @@
 				<td>${u.category}</td>
 				<td>${u.title}</td>
 				<td>${u.writer}</td>
-				<td>${u.content}</td>
 				<td>${u.regdate}</td>
+				<td><a href="viewpost/${u.seq}">글보기</a></td>
 				<td><a href="editpost/${u.seq}">글수정</a></td>
 				<td><a href="javascript:delete_ok('${u.seq}', '${u.writer}')">글삭제</a></td>
 			</tr>
