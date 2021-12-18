@@ -25,9 +25,9 @@
 		<table id="edit">
 			<tr>
 				<td>종류</td>
-				<td><input type="radio" id="ch1" value="공지">
+				<td><input type="radio" id="ch1" name="main_category" value="공지">
 				<label for="ch1">공지</label>
-				<input type="radio" id="ch2" value="일반">
+				<input type="radio" id="ch2" name="main_category" value="일반">
 				<label for="ch2">일반</label></td>
 			</tr>
 			<tr>
