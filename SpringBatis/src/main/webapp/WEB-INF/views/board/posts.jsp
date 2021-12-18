@@ -54,11 +54,14 @@
 <script>
 	function delete_ok(id, writer) {
 		var a = false
-		
 		if('${loginId}' != writer && '${loginId}' != 'admin') alert("권한이 없습니다.")
 		else a = confirm("정말로 삭제하겠습니까?");
 		if (a)
 			location.href = 'deleteok/' + id;
+	}
+	function edit_ok(id, writer) {
+		if('${loginId}' != writer && '${loginId}' != 'admin') alert("권한이 없습니다.")
+		else location.href = "editpost/" + id;
 	}
 </script>
 </head>
@@ -86,7 +89,7 @@
 				<td>${u.writer}</td>
 				<td>${u.regdate}</td>
 				<td><a href="viewpost/${u.seq}">글보기</a></td>
-				<td><a href="editpost/${u.seq}">글수정</a></td>
+				<td><a href="javascript:edit_ok('${u.seq}', '${u.writer}')">글수정</a></td>
 				<td><a href="javascript:delete_ok('${u.seq}', '${u.writer}')">글삭제</a></td>
 			</tr>
 		</c:forEach>
