@@ -7,6 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class BoardVO {
 	private int seq;
 	private String title;
+	private String main_category;
 	private String category;
 	private String writer;
 	private String content;
@@ -61,5 +62,11 @@ public class BoardVO {
 	}
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	public String getMain_category() {
+		return main_category;
+	}
+	public void setMain_category(String main_category) {
+		this.main_category = main_category;
 	}
 }
